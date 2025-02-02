@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sofadi+One&family=Sofia&display=swap');
+
+:root{
+    --bg-color:#a2ca71;
+    --main-color:#185519;
+    --gray:#555;
+    --white:#fff;
+    --black:#000;
+    --dark-gray:#333
+}
+
+*{
+  font-family: "Sofia", serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  transition: all .3s linear;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: var(--bg-color);
+}
+
+::-webkit-scrollbar{
+    width: 1rem;
+}
+::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 8%;
+    position: fixed;
+    top: 0; left: 0;right: 0;
+    z-index: 100;
+   background-color: var(--bg-color);
+}
+
+.header .logo i{
+    font-size: 2rem;
+    color: var(--main-color);
+    margin-right: .5rem;
+}
+
+.header .logo h3{
+    font-size: 3rem;
+    color: var(--black);
+    font-weight: 600;
+}
+
+.header .logo h3 span{
+    font-size: 3rem;
+    color: var(--main-color);
+}
+
+.header .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.header .navbar a{
+    font-size: 1.7rem;
+    color: var(--white);
+    font-weight: 500;
+    padding: 1rem;
+}
+
+.header .navbar a:hover{
+    background-color: var(--white);
+    color: var(--main-color);
+}
+
+.header .icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;   
+}
+.header .icons i{
+    font-size: 2rem;
+    color: var(--main-color);
+    cursor: pointer;
+    width: 4rem;
+    height: 4rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+.header .icons i:hover{
+    background-color: var(--white);
+    box-shadow: .1rem .5rem 1rem var(--dark-gray);
+}
+
+.header .icons i.fa-ellipsis-vertical, .header .icons i.fa-x{
+    display: none;
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    padding: 5rem 8%;
+    flex-wrap: wrap;
+    min-height: 100vh;
+}
+.home img{
+    height: 45rem;
+    object-fit: cover;
+}
+
+.home .content h1{
+    font-size: 5rem;
+    font-weight: 900;
+}
+.home .content h1 span{
+    font-size: 5rem;
+    font-weight: 900;
+}
+.home .content p{
+    font-size: 1.7rem;
+    color: #eeeeee;
+    line-height: 2;
+    text-transform: lowercase;
+}
+
+.home .content .btn{
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1.7rem 3rem;
+    background-color: var(--white);
+    margin: 2rem 0;
+    color: var(--black);
+    border-radius: 3rem;
+}
+
+.home .content .btn i{
+    color: var(--white);  
+}
+
+.home .content .btn:hover{
+    background-color: var(--main-color);
+    color: white;   
+}
+
+.home .content .btn:hover i{
+    color: var(--white);  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:767px){
+    html{
+        font-size: 55%;
+    }
+    .header{
+        border-bottom: .1rem solid var(--main-color);
+    }
+    .header .navbar{
+        position: absolute;
+        background-color: var(--dark-gray);
+        width: 50%;
+        top: 7rem;
+        right: 0;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+    }
+
+    .header .navbar .active{
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+    }
+    
+    .header .navbar .links{
+        align-items: center;
+        justify-content: center;
+        height: 100vh;        
+        display: grid;
+        gap: 2rem;
+        width: 100%;
+    }
+
+    .header .navbar .links a{
+        width: 100%;
+        font-size: 1.7rem;
+    }
+
+    .header .icons i.fa-ellipsis-vertical{
+        display: flex;
+    }
+    .header .icons i.fa-x.show{
+        display: flex;
+    }
+    .header .icons i.fa-ellipsis-vertical.hide{
+        display: none;
+    }
+    .home .content{
+       width: 100%; 
+    }
+    
+}
