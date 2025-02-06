@@ -336,6 +336,57 @@ body{
     background-color: var(--dark-gray);
 }
 
+.care{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    padding: 5rem left;
+    min-height: 100vh;
+}
+.care .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.care h2{
+    font-size: 3rem;
+    color: var(--black);
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+.care .container img{
+    max-height: 350px;  /* or any specific value */
+    max-width: 350px;
+    object-fit: cover;
+    margin-right: 2.3rem;
+}
+.care .container .content{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    width: 50%;
+}
+.care .container .content .check{
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+.care .container .content .check i{
+    color: green;
+    font-size: 2rem;
+}
+.care .container .content .check p{
+    color: #eeeeee;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
 
 
 
