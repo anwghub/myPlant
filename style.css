@@ -52,9 +52,9 @@ body{
 }
 
 .header .logo i{
-    font-size: 2rem;
+    font-size: 4rem;
     color: var(--main-color);
-    margin-right: .5rem;
+    margin-right: .2rem;
 }
 
 .header .logo h3{
