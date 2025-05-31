@@ -1,1 +1,3 @@
 # myPlant
+
+React js web app for online plant selling and caring....
